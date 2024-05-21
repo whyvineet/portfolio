@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 /* Global Reset */
 * {
     margin: 0;
@@ -11,6 +13,8 @@ body {
     font-family: "AktivGrotesk", "stabil_grotesk", sans-serif;
     line-height: 1.6;
     font-size: 16px;
+    background-color: #f9f9f9;
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,37 +24,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
 }
 
 p {
     margin-bottom: 15px;
 }
 
-/* Main Template */
-#mainTemplate {
-    text-align: center;
-    padding: 20px;
-}
-
-blockquote {
-    font-size: 24px;
-    font-style: italic;
-    border-left: 5px solid #d90429;
-    padding-left: 20px;
-    margin: 0 auto;
-    max-width: 80%;
+/* Color Palette */
+:root {
+    --primary-color: #ef233c; /* Red */
+    --secondary-color: #118ab2; /* Blue */
+    --background-color: #f9f9f9; /* Light gray */
+    --text-color: #333; /* Dark gray */
 }
 
 /* Header */
 header {
-    background-color: #f8f9fa;
-    padding: 20px 0;
+    background-color: transparent;
+    padding: 0px 0;
+    transition: top 0.3s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    border-radius: 10%;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+#logo {
+    padding: 10px;
+    font-family: 'Cookie', cursive;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#head {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -64,11 +83,47 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #8d99ae;
+    color: var(--text-color);
+    transition: color 0.2s linear;
 }
 
 nav ul li a:hover {
-    color: #ef233c;
+    color: var(--primary-color);
+}
+
+/* Main Template */
+#mainTemplate {
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 60px 0;
+    margin-bottom: 10px;
+}
+
+#mainTemplate img {
+    height: 150px;
+    border-radius: 50%;
+    width: auto;
+}
+
+#mainTemplate h1 {
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-color);
+    transition: color 0.2s linear;
+}
+
+#mainTemplate h1:hover {
+    color: var(--text-color);
+}
+
+#mainTemplate h3 {
+    font-size: 12px;
+}
+
+#mainTemplate div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Main Content */
@@ -76,15 +131,9 @@ main {
     padding: 20px;
 }
 
-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 20px 0;
-}
-
 /* About Section */
 #about {
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     padding: 60px 0;
     margin-bottom: 10px;
 }
@@ -120,19 +169,19 @@ hr {
 }
 
 .about-text a {
-    color: #d90429;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
+    transition: .2s linear all;
 }
 
 .about-text a:hover {
     text-decoration: underline;
 }
 
-
 /* Education Section */
 #education {
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 60px 0;
     margin-bottom: 10px;
 }
@@ -143,7 +192,9 @@ hr {
 
 /* Skills Section */
 #skills {
-    padding-bottom: 40px;
+    background-color: var(--background-color);
+    padding: 60px 0;
+    margin-bottom: 10px;
 }
 
 .skill-category {
@@ -153,7 +204,7 @@ hr {
 
 /* Projects Section */
 #projects {
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     padding: 60px 0;
     margin-bottom: 10px;
 }
@@ -187,9 +238,10 @@ hr {
 
 /* Connect Section */
 #connect {
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 60px 0;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .social-links {
@@ -198,14 +250,13 @@ hr {
 }
 
 .social-links img {
-    height: 70px;
+    height: 50px;
     width: auto;
 }
 
-
 /* Queries Section */
 #queries {
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     padding: 60px 0;
 }
 
@@ -227,11 +278,12 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #ef233c;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    transition: background-color 0.2s linear;
 }
 
 input[type="submit"]:hover {
@@ -240,8 +292,8 @@ input[type="submit"]:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: var(--text-color);
+    color: white;
+    padding: 5px 0;
     text-align: center;
 }
