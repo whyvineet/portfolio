@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    background-color: #24252a;
+    color: #edf0f1;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: left;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #24252a;
+    position: fixed;
+    max-height: 80px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    cursor: pointer;
+    font-family: "Cookie", cursive !important;
+    font-size: 40px !important;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_links li a {
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #0088a9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Main Template */
+#mainTemplate {
+    text-align: center;
+    padding: 150px 0 60px;
+    background-color: #24252a;
+    height: calc(100vh - 80px);
+}
+
+#mainTemplate h1 {
+    font-size: 50px;
+    color: #edf0f1;
+    transition: color 0.2s linear;
+    text-align: center;
+}
+
+#mainTemplate h3 {
+    font-size: 24px;
+    color: #0088a9;
+}
+
+/* Main Content */
+main {
+    padding: 60px 20px;
+    background-color: #24252a;
+}
+
+/* About Section */
+#about {
+    padding: 60px 0;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    background-color: #1b1c1f;
+}
+
+.about-container {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('/Images/BG Image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-content {
+    padding: 30px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content article h2 {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.about-content h2::after {
+    content: "";
+    height: 5px;
+    width: 225px;
+    background-color: #fff;
+    display: block;
+    margin: 10px auto;
+}
+
+.about-content article img {
+    height: 200px;
+    width: 200px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.about-content article blockquote {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.about-content article h5 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+.about-content article p {
+    font-size: 17px;
+}
+
+/* Education Section */
+#education {
+    padding: 60px 0;
+}
+
+#education ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 0;
+    background-color: #1b1c1f;
+}
+
+.skill-category {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 0;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.project-text {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.project-image {
+    flex: 1;
+    text-align: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Connect Section */
+#connect {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.social-links {
+    display: inline-block;
+    margin: 20px;
+}
+
+.social-links img {
+    height: 50px;
+    width: auto;
+}
+
+/* Queries Section */
+#queries {
+    padding: 60px 0;
+    background-color: #1b1c1f;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+    color: #edf0f1;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: rgba(0, 136, 169, 1);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Footer */
+footer {
+    background-color: #24252a;
+    color: #edf0f1;
+    padding: 20px 0;
+    text-align: center;
+}
