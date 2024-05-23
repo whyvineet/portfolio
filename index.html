@@ -7,45 +7,41 @@
     <meta name="description" content="Portfolio of Vineet Kumar, a Python developer specializing in automation and data analysis.">
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="./Images/V.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div id="head">
-            <a id="logo" href="index.html" aria-label="Home">
-                <h1>Vineet Kumar</h1>
-            </a>
+            <a class="logo" href="index.html" aria-label="Home">Vineet</a>
             <nav>
-                <ul>
+                <ul class="nav_links">
                     <li><a href="about.html">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="https://www.freelancer.com/u/whyvineet" target="_blank">Hire me</a></li>
                 </ul>
             </nav>
-        </div>
+            <a class="HireMe" href="https://www.freelancer.com/u/whyvineet" target="_blank"><button>Hire Me</button></a>
     </header>
     
     <main>
         <section id="mainTemplate">
             <div>
-                <img src="./Images/DevWithHoodie.png" alt="Developer wearing a hoodie">
-                <h1>PYTHON DEVELOPER</h1>
-                <h3>Expert Python developer specializing in automation and data analysis.</h3>
+                <h1>REIMAGINE, EVOLVE, DISCOVER</h1>
+                <h3>Unlock the Crimson Potential!</h3>
             </div>
         </section>
         
         <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
+            <div class="about-container">
                 <div class="about-content">
-                    <div class="about-image">
-                        <img src="./Images/myPhoto.jpg" alt="Vineet Kumar">
-                    </div>
-                    <div class="about-text">
-                        <p>Hello, I'm Vineet Kumar, a dedicated BTech Computer Science and Engineering student specializing in Artificial Intelligence at Galgotias University. My journey into the realm of technology began with my foundational education at Panchsheel Balak Inter College, where I successfully completed my 10th and 12th-grade studies.</p>
-                        <p>Driven by an unwavering passion for technology and AI, I'm on a dedicated path towards forging a fulfilling career as an AI Engineer. With a primary focus on Python, complemented by proficiency in Java, C, and MySQL, I'm actively exploring the dynamic intersections of data and programming. <a href="about.html" target="_blank">Read More</a></p>
-                    </div>
+                    <article>
+                        <h2>About Me</h2>
+                        <img src="./Images/myPhoto_Sq.jpg" alt="Vineet Kumar">
+                        <blockquote>
+                            AI enthusiast with Python expertise seeks an AI Engineering role. Proven MySQL skills complement front-end development experience. Eager to bridge the gap between data science and software engineering.
+                          </blockquote>
+                        <h5>Vineet Kumar</h5>
+                        <p>AI-focused B.Tech (CSE) at Galgotias University.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -124,7 +120,7 @@
         <section id="queries">
             <div class="container">
                 <h2>Any Queries?</h2>
-                <form>
+                <form netlify>
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" placeholder="Matt Murdock" aria-label="Name">
