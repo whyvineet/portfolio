@@ -4,7 +4,7 @@ window.onscroll = function() {
     if (prevScrollpos > currentScrollPos) {
         document.querySelector("header").style.top = "0";
     } else {
-        document.querySelector("header").style.top = "-80px"; // Adjust this value according to your navbar height
+        document.querySelector("header").style.top = "-80px";
     }
     prevScrollpos = currentScrollPos;
 }
