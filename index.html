@@ -1,175 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vineet Kumar - Portfolio</title>
-    <meta name="description" content="Portfolio of Vineet Kumar, a Python developer specializing in automation and data analysis.">
+    <meta name="author" content="Vineet Kumar">
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Portfolio of Vineet Kumar, a Python developer specializing in automation and data analysis.">
+    <meta name="keywords" content="Vineet Kumar, Python developer, data science, AI, portfolio">
+    <meta property="og:title" content="Vineet Kumar - Portfolio">
+    <meta property="og:description"
+        content="Portfolio of Vineet Kumar, a Python developer specializing in automation and data analysis.">
+    <meta property="og:image" content="./assets/portfolio-image.jpg">
+    <meta property="og:url" content="https://whyvineet.netlify.app">
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="./assets/V.png">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-            <a class="logo" href="index.html" aria-label="Home">Vineet</a>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="services.html">Services</a></li>
-                </ul>
-            </nav>
-            <a class="HireMe" href="https://www.freelancer.com/u/whyvineet" target="_blank"><button>Hire Me</button></a>
+        <a class="logo" href="index.html" aria-label="Home">Vineet</a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#connect">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="HireMe" href="https://www.freelancer.com/u/whyvineet" target="_blank"
+            rel="noopener noreferrer"><button>Hire Me</button></a>
     </header>
-    
+
     <main>
         <section id="mainTemplate">
-            <div>
-                <h1>REIMAGINE, EVOLVE, DISCOVER</h1>
-                <h3>Unlock the Crimson Potential!</h3>
+            <div class="container">
+                <h1>Hi, my name is <div class="name">Vineet Kumar</div>
+                </h1>
+                <h3>I'm a data science & AI enthusiast!</h3>
             </div>
         </section>
-        
+
         <section id="about">
-            <div class="about-container">
+            <div class="container">
+                <h2>About Me</h2>
+
                 <div class="about-content">
-                    <article>
-                        <h2>About Me</h2>
-                        <img src="./assets/myPhoto_Sq.jpg" alt="Vineet Kumar">
-                        <blockquote>
-                            AI enthusiast with Python expertise seeks an AI Engineering role. Proven MySQL skills complement front-end development experience. Eager to bridge the gap between data science and software engineering.
-                          </blockquote>
-                        <h5>Vineet Kumar</h5>
-                        <p>AI-focused B.Tech (CSE) at Galgotias University.</p>
-                    </article>
+                    <img src="./assets/myPhoto_Sq.jpg" alt="Vineet Kumar">
+                    <div class="about-text">
+                        <p>
+                            I am Vineet Kumar, a BTech CSE student specializing in AI at Galgotias University, graduating in 2027.
+                        </p>
+                        <p>
+                            I am dedicated to building a career as a software developer, with a strong interest in data science and AI. I am open to opportunities and eager to make a meaningful impact in the tech industry.
+                        </p>
+                        <p>
+                            Feel free to download my resume here for more details about my background and skills.
+                        </p>
+                        <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+                            <button>Download Resume</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section id="education">
-            <div class="container">
-                <h2>Education</h2>
-                <ul>
-                    <li>
-                        <b>Bachelor of Technology in Computer Science and Engineering</b><br>
-                        <i>Specialization in Artificial Intelligence</i><br>
-                        Galgotias University, Greater Noida, Uttar Pradesh
-                    </li>
-                </ul>
-            </div>
-        </section>
-        
+
         <section id="skills">
             <div class="container">
-                <h2>Technical Proficiencies</h2>
-                <div class="skills-category">
-                    <div class="skill">
-                        <img src="./assets/HTML5.png" alt="HTML Logo" class="skill-logo">
-                        <h3>HTML</h3>
-                        <span class="bar"><span class="HTML"></span></span>
+                <h2>Tech I Am Good At</h2>
+
+                <div class="skills-grid">
+                    <div class="card-content">
+                        <h3 class="card-title">Programming Languages</h3>
+                        <div class="skill">
+                            <img src="./assets/Python.png" alt="Python Logo" class="skill-image">
+                            <img src="./assets/Java.png" alt="Java Logo" class="skill-image">
+                            <img src="./assets/C.png" alt="C Logo" class="skill-image">
+                        </div>
                     </div>
-                    <div class="skill">
-                        <img src="./assets/CSS.png" alt="CSS Logo" class="skill-logo">
-                        <h3>CSS</h3>
-                        <span class="bar"><span class="CSS"></span></span>
+                    <div class="card-content">
+                        <h3 class="card-title">Web Development</h3>
+                        <div class="skill">
+                            <img src="./assets/HTML5.png" alt="HTML Logo" class="skill-image">
+                            <img src="./assets/CSS.png" alt="CSS Logo" class="skill-image">
+                            <img src="./assets/Flask.png" alt="Flask Logo" class="skill-image">
+                        </div>
                     </div>
-                    <div class="skill">
-                        <img src="./assets/JavaScript.png" alt="JavaScript Logo" class="skill-logo">
-                        <h3>JavaScript</h3>
-                        <span class="bar"><span class="JavaScript"></span></span>
+                    <div class="card-content">
+                        <h3 class="card-title">Data Analysis</h3>
+                        <div class="skill">
+                            <img src="./assets/Python Pandas Logo.png" alt="Pandas Logo" class="skill-image">
+                            <img src="./assets/NumPy.png" alt="NumPy Logo" class="skill-image">
+                            <img src="./assets/Matplotlib.png" alt="Matplotlib Logo" class="skill-image">
+                            <img src="./assets/Seaborn.png" alt="Seaborn Logo" class="skill-image">
+                            <img src="./assets/Tableau.png" alt="Tableau Logo" class="skill-image">
+                        </div>
                     </div>
-                    <div class="skill">
-                        <img src="./assets/Python.png" alt="Python Logo" class="skill-logo">
-                        <h3>Python</h3>
-                        <span class="bar"><span class="Python"></span></span>
-                    </div>
-                    <div class="skill">
-                        <img src="./assets/C.png" alt="C Logo" class="skill-logo">
-                        <h3>C</h3>
-                        <span class="bar"><span class="C"></span></span>
-                    </div>
-                    <div class="skill">
-                        <img src="./assets/Java.png" alt="Java Logo" class="skill-logo">
-                        <h3>Java</h3>
-                        <span class="bar"><span class="Java"></span></span>
+                    <div class="card-content">
+                        <h3 class="card-title">Machine Learning</h3>
+                        <div class="skill">
+                            <img src="./assets/TensorFlow.png" alt="TensorFlow Logo" class="skill-image">
+                            <img src="./assets/PyTorch.png" alt="PyTorch Logo" class="skill-image">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
+        <section id="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3>Software Engineering Virtual Experience</h3>
+                        <h4>J.P. Morgan (Completed on Forage)</h4>
+                        <p>July 2024</p>
+                        <ul>
+                            <li>Set up a local dev environment by downloading the necessary files, tools and dependencies.</li>
+                            <li>Fixed broken files in the repository to make web application output correctly.</li>
+                            <li>Used JPMorgan Chase’s open source library called Perspective to generate a live graph that displays a data feed in a clear and visually appealing way for traders to monitor.</li>
+                        </ul>
+                        <a href="./assets/jp-morgan-certificate.pdf" target="_blank" rel="noopener noreferrer">
+                            <button>View Certificate</button>
+                        </a>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Data Visualisation: Empowering Business with Effective Insights Job Simulation</h3>
+                        <h4>Tata Group (Completed on Forage)</h4>
+                        <p>June 2024</p>
+                        <ul>
+                            <li>Completed a simulation involving creating data visualizations for Tata Consultancy Services.</li>
+                            <li>Prepared questions for a meeting with client senior leadership.</li>
+                            <li>Created visuals for data analysis to help executives with effective decision making.</li>
+                        </ul>
+                        <a href="./assets/tata-group-certificate.pdf" target="_blank" rel="noopener noreferrer">
+                            <button>View Certificate</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="projects">
             <div class="container">
                 <h2>Projects</h2>
-                <div class="project">
-                    <div class="project-content">
-                        <div class="project-text">
-                            <h3>Portfolio Website</h3>
-                            <p>This portfolio website showcases my skills, education, and projects.</p>
-                            <p>It includes sections such as About Me, Education, Skills, and Contact.</p>
-                            <p>Technologies used: HTML, CSS, JavaScript</p>
+                <div class="projects-grid">
+                    <div class="project">
+                        <img src="./assets/project1.png" alt="Project 1 Thumbnail" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Project Title 1</h3>
+                            <p>Brief description of the project.</p>
+                            <a href="https://link-to-project1.com" target="_blank">
+                                <button>View Project</button>
+                            </a>
                         </div>
-                        <div class="project-image">
-                            <img src="./assets/BG Link.png" alt="Screenshot of Portfolio Project">
+                    </div>
+                    <div class="project">
+                        <img src="./assets/project2.png" alt="Project 2 Thumbnail" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Project Title 2</h3>
+                            <p>Brief description of the project.</p>
+                            <a href="https://link-to-project2.com" target="_blank">
+                                <button>View Project</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./assets/project3.png" alt="Project 3 Thumbnail" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Project Title 3</h3>
+                            <p>Brief description of the project.</p>
+                            <a href="https://link-to-project3.com" target="_blank">
+                                <button>View Project</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="./assets/project4.png" alt="Project 4 Thumbnail" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3>Project Title 4</h3>
+                            <p>Brief description of the project.</p>
+                            <a href="https://link-to-project4.com" target="_blank">
+                                <button>View Project</button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section id="connect">
             <div class="container">
-                <h2>Connect with Me</h2>
-                <div class="social-links">
-                    <a href="https://github.com/whyvineet" aria-label="GitHub Profile"><img src="./assets/GitHub logo.png" height="50" alt="GitHub Logo"></a>
-                    <h3>GitHub</h3>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/whyvineet/" aria-label="LinkedIn Profile"><img src="./assets/LinkedIn Logo.png" height="50" alt="LinkedIn Logo"></a>
-                    <h3>LinkedIn</h3>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/whyvineet/?hl=en" aria-label="Instagram Profile"><img src="./assets/Instagram Logo.png" height="50" alt="Instagram Logo"></a>
-                    <h3>Instagram</h3>
-                </div>
-                <div class="social-links">
-                    <a href="https://twitter.com/WhyVineet" aria-label="Twitter Profile"><img src="./assets/X Logo.png" height="50" alt="Twitter Logo"></a>
-                    <h3>X (Twitter)</h3>
+                <h2>Connect With Me</h2>
+                <div class="connect-grid">
+                    <div class="connect-form">
+                        <form netlify>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="connect-links">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/whyvineet" target="_blank">
+                                <img src="./assets/LinkedIn Logo.png" alt="LinkedIn">
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/whyvineet" target="_blank">
+                                <img src="./assets/GitHub logo.png" alt="GitHub">
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://twitter.com/whyvineet" target="_blank">
+                                <img src="./assets/X Logo.png" alt="Twitter">
+                                <span>X (Twitter)</span>
+                            </a>
+                            <a href="https://www.instagram.com/whyvineet" target="_blank">
+                                <img src="./assets/Instagram Logo.png" alt="Instagram">
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section id="queries">
-            <div class="container">
-                <h2>Any Queries?</h2>
-                <form netlify>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Matt Murdock" aria-label="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" placeholder="99XXXXXX01" aria-label="Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="mattmurdock@example.com" aria-label="Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="queries">Your Queries</label>
-                        <textarea id="queries" placeholder=" I'm reaching out to inquire about....." rows="5" aria-label="Your Queries"></textarea>
-                    </div>
-                    <input type="submit" value="Send Queries">
-                </form>
-            </div>
-        </section>
+
     </main>
     <footer>
         <div class="container">
-            <h6>Copyright &copy; 2024 Vineet Kumar. All Rights Reserved.</h6>
+            <p>&copy; 2024 Vineet Kumar. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
+
 </html>
