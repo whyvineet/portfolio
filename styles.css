@@ -407,6 +407,7 @@ section {
     margin: 20px 0;
     padding: 20px;
     background-color: #1b1c1f;
+    border-radius: 10px;
 }
 
 #connect h2 {
