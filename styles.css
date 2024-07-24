@@ -383,6 +383,8 @@ section {
 }
 
 .project-info p {
+    text-align: justify;
+    font-size: 15px;
     margin-bottom: 15px;
     color: #ccc;
 }
