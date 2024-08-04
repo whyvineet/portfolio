@@ -717,8 +717,15 @@ footer {
     }
 
     .social-icons a img {
-        width: 40px;
-        height: 40px;
+        width: 100%;
+        max-width: 40px;
+        height: 100%;
+        max-height: 40px;
+
+    }
+
+    .social-icons a span {
+        display: none;
     }
 
     /* Reduce heading sizes */
