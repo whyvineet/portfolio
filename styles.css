@@ -596,7 +596,11 @@ footer {
 
     .container {
         width: 100%;
-        padding: 0 15px;
+        padding: 0;
+    }
+
+    header, main, #mainTemplate, footer {
+        background-color: var(--secondary-bg-color);
     }
 
     #mainTemplate .container {
@@ -613,15 +617,22 @@ footer {
     }
 
     /* About section adjustments */
+    #about {
+        padding: 20px 0;
+        background-color: transparent;
+    }
+
     #about .about-content {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        padding: 20px;
+        background-color: #333;
     }
 
     #about .about-content img {
         width: 100%;
-        max-width: 350px;
+        max-width: 715px;
         border: 5px solid var(--highlight-color);
         margin-right: 0;
     }
@@ -631,8 +642,18 @@ footer {
     }
 
     /* Skills section adjustments */
+    #skills {
+        padding: 20px 0;
+        background-color: transparent;
+    }
+
     #skills .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    #skills .card-content {
+        padding: 20px;
+        background-color: #333;
     }
 
     #skills .skill {
@@ -641,22 +662,51 @@ footer {
     }
 
     /* Experience section adjustments */
+    #experience {
+        padding: 20px 0;
+        background-color: transparent;
+    }
+
     #experience .experience-content {
         margin-top: 20px;
+        padding: 20px;
+        background-color: #333;
     }
 
     /* Projects section adjustments */
+    #projects {
+        padding: 20px 0;
+        background-color: transparent;
+    }
+
     #projects .projects-grid {
         grid-template-columns: 1fr;
     }
 
     .project {
         padding: 15px;
+        padding: 20px;
+        background-color: #333;
     }
 
     /* Connect section adjustments */
+    #connect {
+        padding: 20px 0;
+        background-color: transparent;
+    }
+
     #connect .connect-grid {
         grid-template-columns: 1fr;
+    }
+
+    #connect .connect-form {
+        padding: 20px;
+        background-color: #333;
+    }
+
+    #connect .connect-links {
+        padding: 20px;
+        background-color: #333;
     }
 
     .social-icons {
