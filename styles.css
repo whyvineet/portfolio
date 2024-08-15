@@ -284,6 +284,86 @@ section {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
+/* Articles Section Styling */
+#articles {
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#articles h2 {
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+    font-family: "Boska-Black";
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#articles .articles-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#articles .article-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.article-thumbnail {
+    display: none;
+}
+
+.publication-logo {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.article-text h3 {
+    margin: 0;
+}
+
+.article-text p {
+    margin: 5px 0 0;
+    color: var(--light-text-color);
+}
+
+.article-description {
+    margin-top: 10px;
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.article-text h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.article-text h3 a:hover {
+    color: var(--highlight-color);
+    transform: scale(1.05);
+}
+
 /* Skills Section Styling */
 #skills {
     background: var(--secondary-bg-color);
@@ -429,6 +509,7 @@ section {
 .project-thumbnail {
     width: 100%;
     height: auto;
+    border-radius: 10px;
     border-bottom: 3px solid var(--highlight-color);
 }
 
@@ -639,6 +720,42 @@ footer {
 
     #about .about-text {
         text-align: justify;
+    }
+
+    /* Articles section adjustments */
+    #articles {
+        padding: 20px 0;
+        background-color: transparent;
+    }
+
+    #articles .articles-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #articles .article-item {
+        padding: 20px;
+    }
+
+    #articles .publication-logo {
+        display: none;
+    }
+
+    #articles .article-thumbnail {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        border-bottom: 3px solid var(--highlight-color);
+    }
+
+    .article-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .article-description {
+        display: none;
     }
 
     /* Skills section adjustments */
