@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('./assets/Boska-Black.otf');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 /* Font Preconnect */
 @font-face {
@@ -189,12 +190,14 @@ header .HireMe button:hover {
 }
 
 #mainTemplate h1 {
+    font-family: 'Poppins', sans-serif;
     font-size: 50px;
     color: var(--text-color);
     transition: color 0.2s linear;
 }
 
 #mainTemplate h3 {
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     color: var(--text-color);
 }
@@ -362,6 +365,24 @@ section {
 .article-text h3 a:hover {
     color: var(--highlight-color);
     transform: scale(1.05);
+}
+
+.view-articles {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--highlight-color);
+    border: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.view-articles:hover {
+    background-color: rgba(0, 136, 169, 0.8);
 }
 
 /* Skills Section Styling */
