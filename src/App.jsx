@@ -77,7 +77,7 @@ const projects = [
     description: "Personal portfolio website showcasing projects, skills, and experience with a clean, modern design.",
     longDescription: "A personal portfolio website designed to showcase projects, skills, and experience in a clean, modern layout. Features include project galleries, interactive animations, and seamless navigation.",
     technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
-    thumbnail: "/assets/projects/portfolio/thumbnail.png",
+    thumbnail: "/assets/projects/portfolio/thumbnail.jpg",
     screenshots: [
       "./assets/projects/portfolio/screenshots/responsive.jpg",
       "./assets/projects/portfolio/screenshots/project-showcase.jpg",
