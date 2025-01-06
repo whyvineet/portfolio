@@ -49,9 +49,9 @@ const projects = [
     technologies: ["Python", "TensorFlow", "Google Maps API", "Twilio API"],
     thumbnail: "/assets/projects/raksha/thumbnail.jpeg",
     screenshots: [
-      "./assets/projects/raksha/screenshots/dashboard.webp",
-      "./assets/projects/raksha/screenshots/screenshot2.jpg",
-      "./assets/projects/raksha/screenshots/screenshot3.jpg"
+      "./assets/projects/raksha/screenshots/sos.jpg",
+      "./assets/projects/raksha/screenshots/safety-route.jpg",
+      "./assets/projects/raksha/screenshots/realtime-updates.jpg"
     ],
     link: "https://projectraksha.netlify.app",
     github: "https://github.com/whyvineet/projectraksha",
@@ -64,9 +64,9 @@ const projects = [
     technologies: ["Python", "Google Generative AI", "Telegram API"],
     thumbnail: "/assets/projects/querygenie/thumbnail.webp",
     screenshots: [
-      "./assets/projects/querygenie/screenshots/screenshot1.png",
-      "./assets/projects/querygenie/screenshots/screenshot2.png",
-      "./assets/projects/querygenie/screenshots/screenshot3.png"
+      "./assets/projects/querygenie/screenshots/query.jpg",
+      "./assets/projects/querygenie/screenshots/weather.jpg",
+      "./assets/projects/querygenie/screenshots/retention.jpg"
     ],
     link: "https://t.me/QueryGenie_Bot",
     github: "https://github.com/whyvineet/querygenie",
@@ -79,9 +79,9 @@ const projects = [
     technologies: ["React", "Vite", "Tailwind CSS", "JavaScript"],
     thumbnail: "/assets/projects/portfolio/thumbnail.png",
     screenshots: [
-      "./assets/projects/portfolio/screenshots/homepage.png",
-      "./assets/projects/portfolio/screenshots/experience-section.png",
-      "./assets/projects/portfolio/screenshots/project-section.png"
+      "./assets/projects/portfolio/screenshots/responsive.jpg",
+      "./assets/projects/portfolio/screenshots/project-showcase.jpg",
+      "./assets/projects/portfolio/screenshots/contact-integration.jpg"
     ],
     link: "https://whyvineet.xyz",
     github: "https://github.com/whyvineet/portfolio",
