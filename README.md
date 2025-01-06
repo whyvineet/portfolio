@@ -10,13 +10,10 @@ I'm Vineet Kumar, a Computer Science and Engineering student specializing in Art
 
 Check out my live portfolio website: [Portfolio](https://whyvineet.xyz)
 
-## Deployment Status
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f8efdd75-9430-468d-90a0-bec435f667b7/deploy-status)](https://app.netlify.com/sites/whyvineet/deploys)
-
 ## Contact
 
 If you have any questions or would like to connect, please reach out to me via:
+
 - [LinkedIn](https://www.linkedin.com/in/whyvineet)
 - [whyvineet@outlook.com](mailto:whyvineet@outlook.com)
 
