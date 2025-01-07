@@ -876,16 +876,16 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="py-12 bg-gray-900 text-center">
         <div className="flex items-center justify-center space-x-4">
-          <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://github.com/whyvineet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <GithubIcon size={24} />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://linkedin.com/in/whyvineet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <LinkedinIcon size={24} />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://twitter.com/whyvineet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <TwitterIcon size={24} />
           </a>
-          <a href="" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://instagram.com/whyvineet" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <InstagramIcon size={24} />
           </a>
         </div>
