@@ -321,11 +321,9 @@ const Portfolio = () => {
 
   // Increment view count on page load
   useEffect(() => {
-    // Using a specific key for your domain
     const getViews = async () => {
       try {
-        // First hit to increment the counter
-        const response = await fetch('https://api.countapi.xyz/hit/whyvineet.xyz/visits');
+        const response = await fetch("https://whyvineet.netlify.app/.netlify/functions/viewCounter");
         const data = await response.json();
         
         if (data && data.value) {
@@ -913,10 +911,12 @@ const Portfolio = () => {
         </div>
         <div className="mt-4 text-gray-400">
           <p className="mb-2">&copy; {new Date().getFullYear()} Vineet Kumar. All rights reserved.</p>
-          {viewCount !== null && (
+          {viewCount !== null ? (
             <p className="text-sm">
               Portfolio Views: <span className="text-cyan-400">{viewCount.toLocaleString()}</span>
             </p>
+          ) : (
+            <p className="text-sm text-red-400">Unable to fetch view count.</p>
           )}
         </div>
       </footer>
