@@ -197,7 +197,7 @@ const Portfolio = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [viewCount, setViewCount] = useState(null);
+  const [viewCount, setViewCount] = useState(0);
 
   // Profile images configuration
   const profileImages = {
