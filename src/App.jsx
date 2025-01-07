@@ -197,6 +197,7 @@ const Portfolio = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [viewCount, setViewCount] = useState(null);
 
   // Profile images configuration
   const profileImages = {
@@ -317,6 +318,27 @@ const Portfolio = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  // Increment view count on page load
+  useEffect(() => {
+    // Using a specific key for your domain
+    const getViews = async () => {
+      try {
+        // First hit to increment the counter
+        const response = await fetch('https://api.countapi.xyz/hit/whyvineet.xyz/visits');
+        const data = await response.json();
+        
+        if (data && data.value) {
+          setViewCount(data.value);
+        }
+      } catch (error) {
+        console.error('Error fetching view count:', error);
+        setViewCount(null);
+      }
+    };
+
+    getViews();
+  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -889,7 +911,14 @@ const Portfolio = () => {
             <InstagramIcon size={24} />
           </a>
         </div>
-        <p className="text-gray-400 mt-4">&copy; {new Date().getFullYear()} Vineet Kumar. All rights reserved.</p>
+        <div className="mt-4 text-gray-400">
+          <p className="mb-2">&copy; {new Date().getFullYear()} Vineet Kumar. All rights reserved.</p>
+          {viewCount !== null && (
+            <p className="text-sm">
+              Portfolio Views: <span className="text-cyan-400">{viewCount.toLocaleString()}</span>
+            </p>
+          )}
+        </div>
       </footer>
 
       {/* Scroll to Top Button */}
