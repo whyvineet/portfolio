@@ -197,7 +197,6 @@ const Portfolio = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [viewCount, setViewCount] = useState(0);
 
   // Profile images configuration
   const profileImages = {
@@ -318,25 +317,6 @@ const Portfolio = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  // Increment view count on page load
-  useEffect(() => {
-    const getViews = async () => {
-      try {
-        const response = await fetch("https://whyvineet.netlify.app/.netlify/functions/viewCounter");
-        const data = await response.json();
-        
-        if (data && data.value) {
-          setViewCount(data.value);
-        }
-      } catch (error) {
-        console.error('Error fetching view count:', error);
-        setViewCount(null);
-      }
-    };
-
-    getViews();
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -911,13 +891,6 @@ const Portfolio = () => {
         </div>
         <div className="mt-4 text-gray-400">
           <p className="mb-2">&copy; {new Date().getFullYear()} Vineet Kumar. All rights reserved.</p>
-          {viewCount !== null ? (
-            <p className="text-sm">
-              Portfolio Views: <span className="text-cyan-400">{viewCount.toLocaleString()}</span>
-            </p>
-          ) : (
-            <p className="text-sm text-red-400">Unable to fetch view count.</p>
-          )}
         </div>
       </footer>
 
