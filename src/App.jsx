@@ -197,6 +197,7 @@ const Portfolio = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [visitCount, setVisitCount] = useState(null);
 
   // Profile images configuration
   const profileImages = {
@@ -312,6 +313,36 @@ const Portfolio = () => {
       setCurrentImageIndex(prev => prev === 0 ? maxIndex : prev - 1);
     }
   };
+
+  // Visit count fetch and increment
+  useEffect(() => {
+      const fetchCounter = async () => {
+        const counterURL = `${window.location.origin}/counter.json`;
+  
+        try {
+          // Fetch the current visit count
+          const response = await fetch(counterURL);
+          const data = await response.json();
+          setVisitCount(data.visits);
+  
+          // Trigger GitHub Actions to increment the counter
+          await fetch("https://api.github.com/repos/whyvineet/portfolio/dispatches", {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${process.env.REACT_APP_GITHUB_PAT}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              event_type: "update-counter",
+            }),
+          });
+        } catch (error) {
+          console.error("Error fetching or updating visit counter:", error);
+        }
+      };
+  
+      fetchCounter();
+    }, []);
 
   // Scroll to top handler
   const scrollToTop = () => {
@@ -891,6 +922,7 @@ const Portfolio = () => {
         </div>
         <div className="mt-4 text-gray-400">
           <p className="mb-2">&copy; {new Date().getFullYear()} Vineet Kumar. All rights reserved.</p>
+          <p>Visits: {visitCount !== null ? visitCount : "Loading..."}</p>
         </div>
       </footer>
 

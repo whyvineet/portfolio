@@ -1,0 +1,36 @@
+name: Update Visit Counter
+
+on:
+  repository_dispatch:
+    types: [update-counter]
+
+jobs:
+  update-counter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Increment Counter
+        run: |
+          COUNTER_FILE="./public/counter.json"
+
+          # Read the current counter value
+          CURRENT_COUNT=$(jq '.visits' $COUNTER_FILE)
+          echo "Current Visit Count: $CURRENT_COUNT"
+
+          # Increment the value
+          NEW_COUNT=$((CURRENT_COUNT + 1))
+          echo "New Visit Count: $NEW_COUNT"
+
+          # Update the JSON file
+          echo "{\"visits\": $NEW_COUNT}" > $COUNTER_FILE
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add public/counter.json
+          git commit -m "Increment visit counter"
+          git push
