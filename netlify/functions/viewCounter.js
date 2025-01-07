@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const filePath = path.resolve(__dirname, "views.json");
+const filePath = path.resolve("/tmp/views.json");
 
 exports.handler = async () => {
   try {
