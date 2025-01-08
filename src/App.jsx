@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon, DownloadIcon, ExternalLinkIcon, MenuIcon, XIcon, Loader2Icon, ChevronUpIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import './styles/animations.css';
 
-// Form validation schema with enhanced error messages
-const validateForm = (values) => {
-  const errors = {};
-  if (!values.name) errors.name = 'Please enter your name';
-  if (!values.email) {
-    errors.email = 'Please enter your email address';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-    errors.email = 'Please enter a valid email address';
-  }
-  if (!values.message) errors.message = 'Please enter your message';
-  else if (values.message.length < 10) errors.message = 'Message must be at least 10 characters long';
-  return errors;
-};
-
 // Experience data
 const experience = [
   {
@@ -890,7 +876,7 @@ const Portfolio = () => {
           </a>
         </div>
         <div className="mt-4 text-gray-400">
-          <p className="mb-2">&copy; {new Date().getFullYear()} Vineet Kumar. All rights reserved.</p>
+          <p className="mb-2">Made with 💙 by Vineet Kumar</p>
         </div>
       </footer>
 
