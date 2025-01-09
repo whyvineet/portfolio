@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon, DownloadIcon, ExternalLinkIcon, MenuIcon, XIcon, Loader2Icon, ChevronUpIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 import './styles/animations.css';
+import ContactForm from './components/ContactForm';
 
 // Experience data
 const experience = [
@@ -178,10 +179,6 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [loadedImages, setLoadedImages] = useState({});
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Profile images configuration
@@ -228,51 +225,6 @@ const Portfolio = () => {
   // Image loading handler
   const handleImageLoad = (imageId) => {
     setLoadedImages(prev => ({ ...prev, [imageId]: true }));
-  };
-
-  // Form handling
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (formErrors[name]) {
-      setFormErrors(prev => ({ ...prev, [name]: '' }));
-    }
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    // Validate form
-    const errors = {};
-    if (!formData.name.trim()) errors.name = 'Name is required';
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required';
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
-      errors.email = 'Invalid email address';
-    }
-    if (!formData.message.trim()) errors.message = 'Message is required';
-
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors);
-      return;
-    }
-
-    setIsSubmitting(true);
-    setFormErrors({});
-
-    try {
-      // Netlify handles the form submission automatically
-      // We just need to reset the form and show success message
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      // Clear status message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }
   };
 
   // Project modal handlers
@@ -762,99 +714,9 @@ const Portfolio = () => {
             </div>
 
             {/* Contact Form */}
-            <form
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              className="bg-gray-900 rounded-xl p-8 space-y-6"
-              onSubmit={handleSubmit}
-            >
-              {/* Netlify Hidden Fields */}
-              <input type="hidden" name="form-name" value="contact" />
-              <div hidden>
-                <input name="bot-field" />
-              </div>
-
-              <div className="space-y-4">
-                <div className="flex flex-col md:flex-row gap-4">
-                  <div className="flex-1">
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Your Name"
-                      className={`w-full bg-gray-800 rounded-lg p-3 text-gray-300 border ${
-                        formErrors.name ? 'border-red-500' : 'border-transparent'
-                      }`}
-                      required
-                    />
-                    {formErrors.name && (
-                      <p className="mt-1 text-sm text-red-500">{formErrors.name}</p>
-                    )}
-                  </div>
-                  <div className="flex-1">
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="Your Email"
-                      className={`w-full bg-gray-800 rounded-lg p-3 text-gray-300 border ${
-                        formErrors.email ? 'border-red-500' : 'border-transparent'
-                      }`}
-                      required
-                    />
-                    {formErrors.email && (
-                      <p className="mt-1 text-sm text-red-500">{formErrors.email}</p>
-                    )}
-                  </div>
-                </div>
-                <div>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Your Message"
-                    rows="5"
-                    className={`w-full bg-gray-800 rounded-lg p-3 text-gray-300 border ${
-                      formErrors.message ? 'border-red-500' : 'border-transparent'
-                    }`}
-                    required
-                  ></textarea>
-                  {formErrors.message && (
-                    <p className="mt-1 text-sm text-red-500">{formErrors.message}</p>
-                  )}
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg py-3 hover:opacity-90 transition-opacity disabled:opacity-50"
-              >
-                {isSubmitting ? (
-                  <Loader2Icon className="w-6 h-6 animate-spin mx-auto" />
-                ) : (
-                  'Send Message'
-                )}
-              </button>
-
-              {submitStatus && (
-                <div
-                  className={`text-sm text-center p-3 rounded-lg ${
-                    submitStatus === 'success'
-                      ? 'bg-green-500/20 text-green-400'
-                      : 'bg-red-500/20 text-red-400'
-                  }`}
-                >
-                  {submitStatus === 'success'
-                    ? 'Message sent successfully! I will get back to you soon.'
-                    : 'An error occurred. Please try again later.'}
-                </div>
-              )}
-            </form>
+            <div>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
