@@ -14,7 +14,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-900 rounded-xl p-8 space-y-6">
+    <form onSubmit={handleSubmit} method="POST" className="bg-gray-900 rounded-xl p-8 space-y-6">
       <div className="space-y-4">
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
