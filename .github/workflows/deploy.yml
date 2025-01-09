@@ -22,7 +22,7 @@ jobs:
 
       - name: Build project
         env:
-          REACT_APP_FORM_ID: ${{ secrets.VITE_FORM_ID }}
+          VITE_FORM_ID: ${{ secrets.VITE_FORM_ID }}
         run: npm run build
 
       - name: Upload production-ready build files
