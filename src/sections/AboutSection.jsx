@@ -13,7 +13,7 @@ const AboutSection = ({ onViewWork }) => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="relative w-56 h-56 md:w-72 md:h-72 overflow-hidden rounded-xl border border-white-400 shadow-lg">
             <img
-              src="/assets/profile/photo.jpg"
+              src="/assets/profile/profile-photo.jpg"
               alt="Vineet Kumar"
               className="w-full h-full object-cover"
             />

@@ -9,7 +9,7 @@ const ExperienceSection = ({ data }) => {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-6xl font-light tracking-wider mb-12">Experience</h2>
-        <div className="border border-white/20 p-8">
+        <div className="border border-white/20 hover:border-white transition-colors duration-300 p-8">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
           <h3 className="text-2xl mb-2 font-bold">{data.title}</h3>
           <h3 className="text-2xl font-light text-gray-400 mb-2 lg:mt-0">{data.period}</h3>
@@ -38,7 +38,7 @@ const ExperienceSection = ({ data }) => {
                   {pub.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 border border-white/20 text-sm text-gray-400 hover:text-white transition-colors duration-300"
+                      className="px-3 py-1 border border-white/20 text-sm transition-colors duration-300"
                     >
                       {tag}
                     </span>

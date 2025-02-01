@@ -11,7 +11,7 @@ const EducationSection = () => {
           Education
         </h2>
         <div className="grid grid-cols-1 gap-8">
-          <div className="border border-white/20 p-8 rounded-lg bg-black/30 backdrop-blur-sm">
+          <div className="border border-white/20 p-8 rounded-lg bg-black/30 hover:border-white transition-colors duration-300 backdrop-blur-sm">
             <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-6">
               <img
                 className="w-24 h-24 rounded-full object-cover shadow-lg"
