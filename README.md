@@ -7,7 +7,7 @@
         <img src="https://img.shields.io/badge/Status-Active-4F46E5?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Status">
     </a>
     <a href="https://whyvineet.xyz">
-        <img src="https://img.shields.io/badge/Updated-January%202024-EA580C?style=for-the-badge&logo=clockify&logoColor=white" alt="Last Updated">
+        <img src="https://img.shields.io/badge/Updated-February%202025-EA580C?style=for-the-badge&logo=clockify&logoColor=white" alt="Last Updated">
     </a>
 </div>
 
