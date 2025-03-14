@@ -2,6 +2,7 @@ import React from "react";
 import { ChevronUpIcon, ChevronDownIcon } from "lucide-react";
 
 const SectionNavigation = ({
+  sections,
   currentSection,
   totalSections,
   onSectionChange,
@@ -17,6 +18,7 @@ const SectionNavigation = ({
               ? "opacity-30"
               : "hover:bg-white hover:text-black"
           } transition-colors duration-300`}
+          aria-label="Previous section"
         >
           <ChevronUpIcon size={24} />
         </button>
@@ -28,6 +30,7 @@ const SectionNavigation = ({
               ? "opacity-30"
               : "hover:bg-white hover:text-black"
           } transition-colors duration-300`}
+          aria-label="Next section"
         >
           <ChevronDownIcon size={24} />
         </button>
@@ -48,6 +51,9 @@ const SectionNavigation = ({
                     currentSection === index ? "bg-white h-8" : "bg-white/50"
                   }`}
                 />
+                <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {sections[index].title}
+                </span>
               </button>
             ))}
         </div>
