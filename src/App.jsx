@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "@formspree/react";
 import MobileBlockScreen from "./components/MobileBlockScreen";
-import Navigation from "./components/Navigation";
 import SectionNavigation from "./components/SectionNavigation";
 import Footer from "./components/Footer";
-import LoadingScreen from "./components/LoadingScreen";
 import HeroSection from "./sections/HeroSection";
-import AboutSection from "./sections/AboutSection";
 import EducationSection from "./sections/EducationSection";
 import ExperienceSection from "./sections/ExperienceSection";
 import ProjectsSection from "./sections/ProjectsSection";
@@ -17,13 +14,11 @@ import portfolioData from "./data/portfolioData";
 const Portfolio = () => {
   const [currentSection, setCurrentSection] = useState(0);
   const [isNavigating, setIsNavigating] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [state, handleSubmit] = useForm(import.meta.env.VITE_FORM_ID);
 
   const sections = [
     { id: "hero", title: "Home" },
-    { id: "about", title: "About" },
     { id: "education", title: "Education" },
     { id: "experience", title: "Experience" },
     { id: "projects", title: "Projects" },
@@ -77,12 +72,6 @@ const Portfolio = () => {
     }, 1000);
   };
 
-  const handleMenuItemClick = (index) => {
-    const sections = document.querySelectorAll("section");
-    sections[index].scrollIntoView({ behavior: "smooth" });
-    setCurrentSection(index);
-  };
-
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -100,27 +89,19 @@ const Portfolio = () => {
 
   return (
     <div className="relative min-h-screen text-white">
-      <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
-
-      <Navigation
+      <SectionNavigation
         sections={sections}
-        onMenuItemClick={handleMenuItemClick}
         currentSection={currentSection}
+        totalSections={sections.length}
+        onSectionChange={handleSectionChange}
       />
 
       <HeroSection />
-      <AboutSection onViewWork={() => handleMenuItemClick(3)} />
       <EducationSection />
       <ExperienceSection data={portfolioData.experience[0]} />
       <ProjectsSection projects={portfolioData.projects} />
       <SkillsSection skills={portfolioData.skills} />
       <ContactSection state={state} handleSubmit={handleSubmit} />
-
-      <SectionNavigation
-        currentSection={currentSection}
-        totalSections={sections.length}
-        onSectionChange={handleSectionChange}
-      />
 
       <Footer />
     </div>
