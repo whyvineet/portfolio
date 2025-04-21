@@ -29,11 +29,11 @@ const portfolioData = {
   ],
   projects: [
     {
-      title: "Aura-lytics",
+      title: "Auralytics",
       description: "An AI-powered interview preparation platform that evaluates confidence through facial expressions, speech flow, and grammatical precision. Empowering candidates to excel in job interviews and exams!",
-      technologies: ["Currently in R&D", "Python", "TensorFlow", "OpenCV"],
-      link: "",
-      github: "",
+      technologies: ["Python", "Flask", "React", "NLP", "Deepface", "Google Cloud"],
+      link: "https://auralytics.tech/",
+      github: "https://github.com/whyvineet/auralytics-docs/",
     },
     {
       title: "Project Raksha",
