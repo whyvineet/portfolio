@@ -98,7 +98,7 @@ const Portfolio = () => {
 
       <HeroSection />
       <EducationSection />
-      <ExperienceSection data={portfolioData.experience[0]} />
+      <ExperienceSection data={portfolioData.experience} />
       <ProjectsSection projects={portfolioData.projects} />
       <SkillsSection skills={portfolioData.skills} />
       <ContactSection state={state} handleSubmit={handleSubmit} />
