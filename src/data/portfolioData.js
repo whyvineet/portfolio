@@ -1,46 +1,32 @@
 const portfolioData = {
   experience: [
     {
-      title: "Technical Content Writer Intern",
+      title: "Summer Intern",
+      company: "Indian Institute of Technology, Madras",
+      period: "July 2025 - Sept 2025",
+      description: "Upcoming research and development internship collaborating with Professor Bala Ramadurai on the innovative Spirelia startup initiative. Will contribute as a Full Stack Developer to build scalable web solutions.",
+    },
+    {
+      title: "Technical Content Writing",
       company: "GeeksforGeeks",
-      period: "Aug 2024 - Present",
-      description: "I authored an article on developing a Telegram bot with the Gemini API, which enables intelligent responses. This accomplishment led to an internship offer from GeeksforGeeks, showcasing the impact of my work. Since then, I have confidently written several articles on diverse subjects, including Python, AI, and Probability.",
-      publications: [
-        {
-          title: "Serialising a Bitcoin Transaction",
-          link: "https://www.geeksforgeeks.org/serialising-a-bitcoin-transaction/",
-          date: "Oct 2024",
-          tags: ["Blockchain"],
-        },
-        {
-          title: "Estimating Pi with Buffon's Needle in Python",
-          link: "https://www.geeksforgeeks.org/estimating-pi-with-buffons-needle-in-python/",
-          date: "Sept 2024",
-          tags: ["Python", "Probability"],
-        },
-        {
-          title: "Optimizing Python Code with Cython",
-          link: "https://www.geeksforgeeks.org/optimizing-python-code-with-cython/",
-          date: "Aug 2024",
-          tags: ["Python", "Optimization", "Cython"],
-        },
-      ],
+      period: "Aug 2024 - Nov 2024",
+      description: "Authored comprehensive technical articles covering Python programming, AI technologies, and software development best practices. Initiated content creation with an innovative Telegram bot tutorial leveraging the Gemini API for enhanced user interactions.",
     },
   ],
   projects: [
     {
       title: "Auralytics",
-      description: "An AI-powered interview preparation platform that evaluates confidence through facial expressions, speech flow, and grammatical precision. Empowering candidates to excel in job interviews and exams!",
-      technologies: ["Python", "Flask", "React", "NLP", "Deepface", "Google Cloud"],
+      description: "Revolutionary AI-powered interview preparation platform that comprehensively evaluates candidate performance through advanced facial expression analysis, speech flow assessment, and grammatical precision scoring. Empowering job seekers and students to excel in interviews and competitive exams with data-driven insights.",
+      technologies: ["Python", "Flask", "React", "NLP", "OpenCV", "Deepface", "Google Cloud", "Machine Learning"],
       link: "https://auralytics.tech/",
       github: "https://github.com/whyvineet/auralytics-docs/",
     },
     {
-      title: "Project Raksha",
-      description: "An app that determines safe route navigation by using real-time crime data to select the safest path between two locations. It also includes a voice-activated SOS feature for emergency assistance.",
-      technologies: ["Currently in Development", "Python", "TensorFlow", "Google Map API"],
+      title: "Braien - Safe Browsing",
+      description: "Innovative web application providing secure, isolated browsing environments through containerized Docker sessions. Each browsing session is completely sandboxed and automatically cleaned post-use, ensuring maximum security and privacy.",
+      technologies: ["Python", "React", "Docker", "FastAPI", "Container Security", "Web APIs"],
       link: "",
-      github: "",
+      github: "https://github.com/whyvineet/braien/",
     },
   ],
   skills: [
@@ -104,7 +90,6 @@ const portfolioData = {
         },
       ],
     },
-
     {
       category: "Machine Learning",
       items: [
@@ -125,6 +110,26 @@ const portfolioData = {
         },
       ],
     },
+    {
+      category: "Cloud & DevOps",
+      items: [
+        {
+          name: "Docker",
+          logo: "/assets/skills/docker.svg",
+          description: "Containerization is the future",
+        },
+        {
+          name: "Google Cloud Platform",
+          logo: "/assets/skills/gcp.svg",
+          description: "My go-to cloud provider",
+        },
+        {
+          name: "Git",
+          logo: "/assets/skills/git.svg",
+          description: "Version control is essential",
+        },
+      ],
+    }
   ],
 };
 
