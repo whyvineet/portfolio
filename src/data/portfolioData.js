@@ -16,8 +16,8 @@ const portfolioData = {
   projects: [
     {
       title: "Auralytics",
-      description: "Revolutionary AI-powered interview preparation platform that comprehensively evaluates candidate performance through advanced facial expression analysis, speech flow assessment, and grammatical precision scoring. Empowering job seekers and students to excel in interviews and competitive exams with data-driven insights.",
-      technologies: ["Python", "Flask", "React", "NLP", "OpenCV", "Deepface", "Google Cloud", "Machine Learning"],
+      description: "Revolutionary AI-powered platform that comprehensively evaluates candidate performance through advanced facial expression analysis, speech flow assessment, and grammatical precision scoring for improving communication skills.",
+      technologies: ["Python", "Flask", "React", "NLP", "OpenCV", "Deepface", "Google Cloud"],
       link: "https://auralytics.tech/",
       github: "https://github.com/whyvineet/auralytics-docs/",
     },
@@ -67,26 +67,6 @@ const portfolioData = {
           name: "Tailwind CSS",
           logo: "/assets/skills/tailwindcss.svg",
           description: "You again? Nope.",
-        },
-      ],
-    },
-    {
-      category: "Data Science",
-      items: [
-        {
-          name: "Pandas",
-          logo: "/assets/skills/pandas.svg",
-          description: "Love the animal 🐼",
-        },
-        {
-          name: "NumPy",
-          logo: "/assets/skills/numpy.svg",
-          description: "Uff! Matrix operations.",
-        },
-        {
-          name: "Tableau",
-          logo: "/assets/skills/tableau.svg",
-          description: "Isn’t my vibe",
         },
       ],
     },
