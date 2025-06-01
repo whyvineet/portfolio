@@ -5,12 +5,14 @@ const portfolioData = {
       company: "Indian Institute of Technology, Madras",
       period: "July 2025 - Sept 2025",
       description: "Upcoming research and development internship collaborating with Professor Bala Ramadurai on the innovative Spirelia startup initiative. Will contribute as a Full Stack Developer to build scalable web solutions.",
+      link: "",
     },
     {
       title: "Technical Content Writing",
       company: "GeeksforGeeks",
       period: "Aug 2024 - Nov 2024",
       description: "Authored comprehensive technical articles covering Python programming, AI technologies, and software development best practices. Initiated content creation with an innovative Telegram bot tutorial leveraging the Gemini API for enhanced user interactions.",
+      link: "https://www.geeksforgeeks.org/user/whyvineet/contributions/",
     },
   ],
   projects: [
