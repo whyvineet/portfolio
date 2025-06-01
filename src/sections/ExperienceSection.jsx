@@ -9,15 +9,23 @@ const ExperienceSection = ({ data }) => {
     >
       <div className="container mx-auto px-6">
         <h2 className="text-6xl font-light tracking-wider mb-12">Experience</h2>
-        <div className="border border-white/20 hover:border-white transition-colors duration-300 p-8">
-        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
-          <h3 className="text-2xl mb-2 font-bold">{data.title}</h3>
-          <h3 className="text-2xl font-light text-gray-400 mb-2 lg:mt-0">{data.period}</h3>
-        </div>
-          <p className="text-gray-400 mb-6">
-            {data.company}
-          </p>
-          <p className="text-lg text-gray-400 mb-6">{data.description}</p>
+        <div className="space-y-6">
+          {data.map((experience, index) => (
+            <div key={index} className="border border-white/20 hover:border-white transition-colors duration-300 p-8">
+              <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
+                <h3 className="text-2xl mb-2 font-bold">{experience.title}</h3>
+                <h3 className="text-2xl font-light text-gray-400 mb-2 lg:mt-0">{experience.period}</h3>
+              </div>
+              <p className="text-gray-400 mb-6">
+                {experience.company}
+              </p>
+              <p className="text-lg text-gray-400 mb-6">{experience.description}</p>
+              <a href={experience.link} className="text-blue-500 hover:underline flex items-center gap-2">
+                View More
+                <ExternalLink size={16} />
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
