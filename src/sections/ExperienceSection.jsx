@@ -20,9 +20,14 @@ const ExperienceSection = ({ data }) => {
                 {experience.company}
               </p>
               <p className="text-lg text-gray-400 mb-6">{experience.description}</p>
-              <a href={experience.link} className="text-blue-500 hover:underline flex items-center gap-2">
+              <a
+                href={experience.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 border border-white hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                <ExternalLink size={16} className="mr-2" />
                 View More
-                <ExternalLink size={16} />
               </a>
             </div>
           ))}
