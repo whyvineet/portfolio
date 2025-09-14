@@ -1,7 +1,7 @@
 <div align="center">
     <h1>Portfolio - Vineet Kumar</h1>
-    <a href="https://whyvineet.xyz">
-        <img src="https://img.shields.io/badge/Portfolio-whyvineet.xyz-F85D7F?style=for-the-badge&logo=firefox&logoColor=white" alt="Website">
+    <a href="https://whyvineet.github.io/portfolio/">
+        <img src="https://img.shields.io/badge/Portfolio-whyvineet-F85D7F?style=for-the-badge&logo=firefox&logoColor=white" alt="Website">
     </a>
     <a href="https://whyvineet.xyz">
         <img src="https://img.shields.io/badge/Status-Active-4F46E5?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Status">
