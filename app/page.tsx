@@ -12,21 +12,25 @@ export default function Home() {
     sections.forEach((section, index) => {
       setTimeout(() => {
         setVisibleSections((prev) => [...prev, section]);
-      }, index * 200);
+      }, index * 90);
     });
   }, []);
 
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      <div className={`transition-all duration-700 ${
-          visibleSections.includes(0) ? "blur-0 opacity-100" : "blur-md opacity-0"
-        }`}>
-        <NavBar />
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <NavBar
+        className={`transition-all duration-500 ease-out ${
+          visibleSections.includes(0)
+            ? "blur-0 opacity-100 translate-y-0"
+            : "blur-md opacity-0 -translate-y-2.5"
+        }`}
+      />
       <main className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12 pb-24 sm:pb-32">
         {/* HERO SECTION */}
-        <section className={`space-y-6 transition-all duration-700 ${
-            visibleSections.includes(1) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 transition-all duration-500 ease-out ${
+            visibleSections.includes(1)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="space-y-3">
@@ -51,13 +55,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
-            visibleSections.includes(2) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+            visibleSections.includes(2)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`} />
 
         {/* ABOUT SECTION */}
-        <section className={`space-y-6 transition-all duration-700 ${
-            visibleSections.includes(3) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 transition-all duration-500 ease-out ${
+            visibleSections.includes(3)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">About</h2>
           <div className="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -69,13 +77,17 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
-            visibleSections.includes(4) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+            visibleSections.includes(4)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`} />
 
         {/* WORK EXPERIENCE SECTION */}
-        <section className={`space-y-6 transition-all duration-700 ${
-            visibleSections.includes(5) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 transition-all duration-500 ease-out ${
+            visibleSections.includes(5)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">Work Experience</h2>
 
@@ -143,13 +155,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
-            visibleSections.includes(6) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+            visibleSections.includes(6)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`} />
 
         {/* OPEN SOURCE SECTION */}
-        <section className={`space-y-6 transition-all duration-700 ${
-            visibleSections.includes(7) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 transition-all duration-500 ease-out ${
+            visibleSections.includes(7)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">
             Open Source Contributions
@@ -194,13 +210,17 @@ export default function Home() {
             </a>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
-            visibleSections.includes(8) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+            visibleSections.includes(8)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`} />
 
         {/* EDUCATION SECTION */}
-        <section className={`space-y-6 transition-all duration-700 ${
-            visibleSections.includes(9) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 transition-all duration-500 ease-out ${
+            visibleSections.includes(9)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">Education</h2>
 
@@ -229,13 +249,17 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
-            visibleSections.includes(10) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+            visibleSections.includes(10)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`} />
 
         {/* SKILLS SECTION */}
-        <section className={`space-y-6 transition-all duration-700 ${
-            visibleSections.includes(11) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 transition-all duration-500 ease-out ${
+            visibleSections.includes(11)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-2">
@@ -271,13 +295,17 @@ export default function Home() {
             </span>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
-            visibleSections.includes(12) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+            visibleSections.includes(12)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`} />
 
         {/* CONTACT SECTION */}
-        <section className={`space-y-6 text-center transition-all duration-700 ${
-            visibleSections.includes(13) ? "blur-0 opacity-100" : "blur-md opacity-0"
+        <section className={`space-y-6 text-center transition-all duration-500 ease-out ${
+            visibleSections.includes(13)
+              ? "blur-0 opacity-100 translate-y-0"
+              : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-3xl sm:text-4xl font-bold">Get in Touch</h2>
           <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300">

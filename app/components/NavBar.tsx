@@ -74,7 +74,7 @@ function NavItem({ children, href, onClick, label, mouseX, external }: NavItemPr
   );
 }
 
-export default function NavBar() {
+export default function NavBar({ className }: { className?: string }) {
   const { isDark, toggleTheme } = useTheme();
   const mouseX = useMotionValue(Infinity);
 
@@ -86,9 +86,9 @@ export default function NavBar() {
     <motion.nav 
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
+      className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 ${className ?? ""}`}
     >
-      <div className="flex items-center gap-1 px-4 py-3 bg-[var(--background)] border border-gray-200 dark:border-gray-700 rounded-full shadow-sm">
+      <div className="flex items-center gap-1 px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-full shadow-sm">
         <NavItem mouseX={mouseX} onClick={scrollToTop} label="Home">
           <HomeIcon width={20} height={20} />
         </NavItem>
