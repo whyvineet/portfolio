@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f5f1e8] text-gray-900">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <div className={`transition-all duration-700 ${
           visibleSections.includes(0) ? "blur-0 opacity-100" : "blur-md opacity-0"
         }`}>
@@ -33,7 +33,7 @@ export default function Home() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 Hi, I&apos;m Vineet Kumar
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-gray-600 dark:text-gray-300">
                 I build backend systems and LLM-powered software.
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 transition-all duration-700 ${
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
             visibleSections.includes(2) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`} />
 
@@ -60,7 +60,7 @@ export default function Home() {
             visibleSections.includes(3) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">About</h2>
-          <div className="space-y-4 text-base sm:text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
               My work focuses on building scalable backend architectures and
               integrating LLM-based pipelines into production-ready systems. I
@@ -69,7 +69,7 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <hr className={`border-gray-300 transition-all duration-700 ${
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
             visibleSections.includes(4) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`} />
 
@@ -95,14 +95,14 @@ export default function Home() {
                   <h3 className="text-lg sm:text-xl font-bold">
                     IIT Madras (NPTEL)
                   </h3>
-                  <p className="text-gray-700">AI/ML Intern</p>
+                  <p className="text-gray-700 dark:text-gray-300">AI/ML Intern</p>
                 </div>
                 <div>
-                  <p className="text-gray-600">July 2025 - Sept 2025</p>
-                  <p className="text-gray-600 sm:text-right">Chennai, India</p>
+                  <p className="text-gray-600 dark:text-gray-300">July 2025 - Sept 2025</p>
+                  <p className="text-gray-600 dark:text-gray-300 sm:text-right">Chennai, India</p>
                 </div>
               </div>
-              <div className="text-gray-600 mt-3 space-y-2">
+              <div className="text-gray-600 dark:text-gray-300 mt-3 space-y-2">
                 <p>
                   Worked on a multi-agent AI system, contributing to backend
                   integration and agent workflow design
@@ -125,16 +125,16 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold">HCL GUVI</h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-300">
                     Student Mentor (National Hackathon)
                   </p>
                 </div>
                 <div>
-                  <p className="text-gray-600">Aug 2025 - Aug 2025</p>
-                  <p className="text-gray-600 sm:text-right">Remote</p>
+                  <p className="text-gray-600 dark:text-gray-300">Aug 2025 - Aug 2025</p>
+                  <p className="text-gray-600 dark:text-gray-300 sm:text-right">Remote</p>
                 </div>
               </div>
-              <div className="text-gray-600 mt-3 space-y-2">
+              <div className="text-gray-600 dark:text-gray-300 mt-3 space-y-2">
                 <p>
                   Mentored 30+ teams in a national-level hackathon, guiding
                   problem framing and solution execution
@@ -143,7 +143,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 transition-all duration-700 ${
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
             visibleSections.includes(6) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`} />
 
@@ -154,7 +154,7 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-bold">
             Open Source Contributions
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300">
             Actively contribute to Python-based open-source projects, with
             experience working on widely used libraries such as:
           </p>
@@ -164,7 +164,7 @@ export default function Home() {
               href="https://github.com/pandas-dev/pandas/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800 transition-colors"
+              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
               pandas
             </a>
@@ -172,7 +172,7 @@ export default function Home() {
               href="https://github.com/numpy/numpy/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800 transition-colors"
+              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
               numpy
             </a>
@@ -180,7 +180,7 @@ export default function Home() {
               href="https://github.com/pgmpy/pgmpy/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800 transition-colors"
+              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
               pgmpy
             </a>
@@ -188,13 +188,13 @@ export default function Home() {
               href="https://github.com/conda-forge/datascience-feedstock/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white rounded-full text-sm hover:bg-gray-800 transition-colors"
+              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
             >
               datascience
             </a>
           </div>
         </section>
-        <hr className={`border-gray-300 transition-all duration-700 ${
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
             visibleSections.includes(8) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`} />
 
@@ -220,16 +220,16 @@ export default function Home() {
                   <h3 className="text-lg sm:text-xl font-bold">
                     Galgotias University
                   </h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-300">
                     Bachelor of Technology in Computer Science
                   </p>
                 </div>
-                <p className="text-gray-600">2023 - 2027</p>
+                <p className="text-gray-600 dark:text-gray-300">2023 - 2027</p>
               </div>
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 transition-all duration-700 ${
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
             visibleSections.includes(10) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`} />
 
@@ -239,39 +239,39 @@ export default function Home() {
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-2">
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               Python
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               FastAPI
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               LLMs
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               RAG
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               LangChain
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               LangGraph
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               PostgreSQL
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               Vector Databases
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               Docker
             </span>
-            <span className="px-4 py-2 bg-black text-white rounded-full text-sm">
+            <span className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm">
               Google Cloud Platform
             </span>
           </div>
         </section>
-        <hr className={`border-gray-300 transition-all duration-700 ${
+        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-700 ${
             visibleSections.includes(12) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`} />
 
@@ -280,13 +280,13 @@ export default function Home() {
             visibleSections.includes(13) ? "blur-0 opacity-100" : "blur-md opacity-0"
           }`}>
           <h2 className="text-3xl sm:text-4xl font-bold">Get in Touch</h2>
-          <p className="text-base sm:text-lg text-gray-700">
+          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300">
             Reach out via{" "}
             <a
               href="https://linkedin.com/in/whyvineet"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               LinkedIn
             </a>
@@ -295,14 +295,14 @@ export default function Home() {
               href="https://twitter.com/whyvineet"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               Twitter
             </a>
             , or{" "}
             <a
               href="mailto:whyvineet@outlook.com"
-              className="text-blue-600 hover:underline"
+              className="text-blue-600 dark:text-blue-400 hover:underline"
             >
               Email
             </a>

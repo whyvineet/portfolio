@@ -1,8 +1,9 @@
 'use client';
 
 import { HomeIcon, GitHubLogoIcon, LinkedInLogoIcon, EnvelopeOpenIcon, SunIcon, MoonIcon } from '@radix-ui/react-icons';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, MotionValue } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -34,7 +35,7 @@ function NavItem({ children, href, onClick, label, mouseX, external }: NavItemPr
   const commonProps = {
     ref: ref as React.RefObject<HTMLAnchorElement> & React.RefObject<HTMLButtonElement>,
     'aria-label': label,
-    className: 'inline-flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300',
+    className: 'inline-flex items-center justify-center text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-700',
   };
 
   if (href) {
@@ -74,15 +75,11 @@ function NavItem({ children, href, onClick, label, mouseX, external }: NavItemPr
 }
 
 export default function NavBar() {
-  const [isDark, setIsDark] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
   const mouseX = useMotionValue(Infinity);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
   };
 
   return (
@@ -91,12 +88,12 @@ export default function NavBar() {
       onMouseLeave={() => mouseX.set(Infinity)}
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
     >
-      <div className="flex items-center gap-1 px-4 py-3 bg-[#f5f1e8] border border-gray-200 rounded-full shadow-sm">
+      <div className="flex items-center gap-1 px-4 py-3 bg-[var(--background)] border border-gray-200 dark:border-gray-700 rounded-full shadow-sm">
         <NavItem mouseX={mouseX} onClick={scrollToTop} label="Home">
           <HomeIcon width={20} height={20} />
         </NavItem>
 
-        <div className="w-px h-5 bg-gray-200" />
+        <div className="w-px h-5 bg-gray-200 dark:bg-gray-700" />
 
         <NavItem mouseX={mouseX} href="https://github.com/whyvineet" label="GitHub" external>
           <GitHubLogoIcon width={20} height={20} />
@@ -110,7 +107,7 @@ export default function NavBar() {
           <EnvelopeOpenIcon width={20} height={20} />
         </NavItem>
 
-        <div className="w-px h-5 bg-gray-200" />
+        <div className="w-px h-5 bg-gray-200 dark:bg-gray-700" />
 
         <NavItem mouseX={mouseX} onClick={toggleTheme} label="Toggle theme">
           {isDark ? <SunIcon width={20} height={20} /> : <MoonIcon width={20} height={20} />}
