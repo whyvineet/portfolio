@@ -17,7 +17,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#f5f1e8] text-gray-900">
       <div className={`transition-all duration-700 ${
           visibleSections.includes(0) ? "blur-0 opacity-100" : "blur-md opacity-0"
         }`}>
