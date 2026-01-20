@@ -170,44 +170,68 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-bold">
             Open Source Contributions
           </h2>
-          <p className="text-gray-600 dark:text-gray-300">
-            Actively contribute to Python-based open-source projects, with
-            experience working on widely used libraries such as:
-          </p>
+          <div className="space-y-4">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              I actively contribute to Python-based open-source projects, focusing on 
+              improving code quality, fixing bugs, and adding new features.
+            </p>
+            
+            <div className="space-y-3">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                Featured contributions:
+              </p>
+              <div className="flex flex-wrap gap-3 items-center">
+                <a
+                  href="https://github.com/pandas-dev/pandas/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                >
+                  pandas
+                </a>
+                <a
+                  href="https://github.com/numpy/numpy/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                >
+                  numpy
+                </a>
+                <a
+                  href="https://github.com/pgmpy/pgmpy/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                >
+                  pgmpy
+                </a>
+                <a
+                  href="https://github.com/conda-forge/datascience-feedstock/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+                >
+                  datascience
+                </a>
+              </div>
+            </div>
 
-          <div className="flex flex-wrap gap-3 items-center">
-            <a
-              href="https://github.com/pandas-dev/pandas/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-            >
-              pandas
-            </a>
-            <a
-              href="https://github.com/numpy/numpy/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-            >
-              numpy
-            </a>
-            <a
-              href="https://github.com/pgmpy/pgmpy/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-            >
-              pgmpy
-            </a>
-            <a
-              href="https://github.com/conda-forge/datascience-feedstock/pulls?q=is%3Apr+author%3Awhyvineet+is%3Aclosed"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
-            >
-              datascience
-            </a>
+            <div className="pt-4 flex items-center gap-3">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Support my open source work:
+              </p>
+              <a
+                href="https://github.com/sponsors/whyvineet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full text-sm hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors"
+              >
+                <svg className="w-4 h-4 text-pink-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                Sponsor
+              </a>
+            </div>
           </div>
         </section>
         <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
