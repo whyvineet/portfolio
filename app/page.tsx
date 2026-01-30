@@ -35,9 +35,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-                Hi, I&apos;m Vineet Kumar
+                Hey, I&apos;m Vineet!
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
+              <p className="text-lg text-content">
                 I build backend systems and LLM-powered software.
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+        <hr className={`border-content transition-all duration-500 ease-out ${
             visibleSections.includes(2)
               ? "blur-0 opacity-100 translate-y-0"
               : "blur-md opacity-0 -translate-y-2.5"
@@ -68,7 +68,7 @@ export default function Home() {
               : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-2xl sm:text-3xl font-bold">About</h2>
-          <div className="space-y-4 text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <div className="space-y-4 text-base sm:text-lg text-content leading-relaxed">
             <p>
               My work focuses on building scalable backend architectures and
               integrating LLM-based pipelines into production-ready systems. I
@@ -77,7 +77,7 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <hr className={`border-gray-300 dark:border-gray-700 transition-all duration-500 ease-out ${
+        <hr className={`border-content transition-all duration-500 ease-out ${
             visibleSections.includes(4)
               ? "blur-0 opacity-100 translate-y-0"
               : "blur-md opacity-0 -translate-y-2.5"
@@ -107,14 +107,14 @@ export default function Home() {
                   <h3 className="text-lg sm:text-xl font-bold">
                     IIT Madras (NPTEL)
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300">AI/ML Intern</p>
+                  <p className="text-content">AI/ML Intern</p>
                 </div>
                 <div>
-                  <p className="text-gray-600 dark:text-gray-300">July 2025 - Sept 2025</p>
-                  <p className="text-gray-600 dark:text-gray-300 sm:text-right">Chennai, India</p>
+                  <p className="text-content">July 2025 - Sept 2025</p>
+                  <p className="text-content sm:text-right">Chennai, India</p>
                 </div>
               </div>
-              <div className="text-gray-600 dark:text-gray-300 mt-3 space-y-2">
+              <div className="text-content mt-3 space-y-2">
                 <p>
                   Worked on a multi-agent AI system, contributing to backend
                   integration and agent workflow design
@@ -137,16 +137,16 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
                 <div>
                   <h3 className="text-lg sm:text-xl font-bold">HCL GUVI</h3>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-content">
                     Student Mentor (National Hackathon)
                   </p>
                 </div>
                 <div>
-                  <p className="text-gray-600 dark:text-gray-300">Aug 2025 - Aug 2025</p>
-                  <p className="text-gray-600 dark:text-gray-300 sm:text-right">Remote</p>
+                  <p className="text-content">Aug 2025 - Aug 2025</p>
+                  <p className="text-content sm:text-right">Remote</p>
                 </div>
               </div>
-              <div className="text-gray-600 dark:text-gray-300 mt-3 space-y-2">
+              <div className="text-content mt-3 space-y-2">
                 <p>
                   Mentored 30+ teams in a national-level hackathon, guiding
                   problem framing and solution execution
@@ -171,7 +171,7 @@ export default function Home() {
             Open Source Contributions
           </h2>
           <div className="space-y-4">
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-content leading-relaxed">
               I actively contribute to Python-based open-source projects, focusing on 
               improving code quality, fixing bugs, and adding new features.
             </p>
@@ -217,7 +217,7 @@ export default function Home() {
             </div>
 
             <div className="pt-4 flex items-center gap-3">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-content">
                 Support my open source work:
               </p>
               <a
@@ -264,11 +264,11 @@ export default function Home() {
                   <h3 className="text-lg sm:text-xl font-bold">
                     Galgotias University
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-content">
                     Bachelor of Technology in Computer Science
                   </p>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300">2023 - 2027</p>
+                <p className="text-content">2023 - 2027</p>
               </div>
             </div>
           </div>
@@ -332,7 +332,7 @@ export default function Home() {
               : "blur-md opacity-0 -translate-y-2.5"
           }`}>
           <h2 className="text-3xl sm:text-4xl font-bold">Get in Touch</h2>
-          <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-base sm:text-lg text-content">
             Reach out via{" "}
             <a
               href="https://linkedin.com/in/whyvineet"

@@ -1,9 +1,8 @@
 'use client';
 
-import { HomeIcon, GitHubLogoIcon, LinkedInLogoIcon, EnvelopeOpenIcon, SunIcon, MoonIcon } from '@radix-ui/react-icons';
+import { HomeIcon, GitHubLogoIcon, LinkedInLogoIcon, EnvelopeOpenIcon } from '@radix-ui/react-icons';
 import { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, MotionValue } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -35,7 +34,7 @@ function NavItem({ children, href, onClick, label, mouseX, external }: NavItemPr
   const commonProps = {
     ref: ref as React.RefObject<HTMLAnchorElement> & React.RefObject<HTMLButtonElement>,
     'aria-label': label,
-    className: 'group relative inline-flex items-center justify-center text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:hover:bg-gray-800 transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-700',
+    className: 'group relative inline-flex items-center justify-center text-gray-900 hover:bg-gray-100 transition-colors rounded-full focus:outline-none focus:ring-2 focus:ring-gray-300',
   };
 
   if (href) {
@@ -73,7 +72,7 @@ function NavItem({ children, href, onClick, label, mouseX, external }: NavItemPr
       }}
     >
       {children}
-      <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs text-white opacity-0 shadow-sm transition-all duration-150 ease-out group-hover:opacity-100 group-hover:-translate-y-0.5 dark:bg-gray-100 dark:text-gray-900">
+      <span className="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs text-white opacity-0 shadow-sm transition-all duration-150 ease-out group-hover:opacity-100 group-hover:-translate-y-0.5">
         {label}
       </span>
     </motion.button>
@@ -81,7 +80,6 @@ function NavItem({ children, href, onClick, label, mouseX, external }: NavItemPr
 }
 
 export default function NavBar({ className }: { className?: string }) {
-  const { isDark, toggleTheme } = useTheme();
   const mouseX = useMotionValue(Infinity);
 
   const scrollToTop = () => {
@@ -94,12 +92,12 @@ export default function NavBar({ className }: { className?: string }) {
       onMouseLeave={() => mouseX.set(Infinity)}
       className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 ${className ?? ""}`}
     >
-      <div className="flex items-center gap-1 px-4 py-3 bg-background border border-gray-200 dark:border-gray-700 rounded-full shadow-sm">
+      <div className="flex items-center gap-1 px-4 py-3 bg-background border border-gray-200 rounded-full shadow-sm">
         <NavItem mouseX={mouseX} onClick={scrollToTop} label="Home">
           <HomeIcon width={20} height={20} />
         </NavItem>
 
-        <div className="w-px h-5 bg-gray-200 dark:bg-gray-700" />
+        <div className="w-px h-5 bg-gray-200" />
 
         <NavItem mouseX={mouseX} href="https://github.com/whyvineet" label="GitHub" external>
           <GitHubLogoIcon width={20} height={20} />
@@ -111,12 +109,6 @@ export default function NavBar({ className }: { className?: string }) {
 
         <NavItem mouseX={mouseX} href="mailto:whyvineet@outlook.com" label="Email" external>
           <EnvelopeOpenIcon width={20} height={20} />
-        </NavItem>
-
-        <div className="w-px h-5 bg-gray-200 dark:bg-gray-700" />
-
-        <NavItem mouseX={mouseX} onClick={toggleTheme} label="Toggle theme">
-          {isDark ? <SunIcon width={20} height={20} /> : <MoonIcon width={20} height={20} />}
         </NavItem>
       </div>
     </motion.nav>
