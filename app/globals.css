@@ -1,38 +1,92 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f1e8;
-  --foreground: #414146;
-  --accent: #2563eb;
+  --background: #f6efe4;
+  --background-soft: rgba(255, 250, 243, 0.72);
+  --background-strong: #fdf8f1;
+  --foreground: #2f2723;
+  --muted: #6d625a;
+  --border: rgba(114, 90, 69, 0.18);
+  --border-strong: rgba(114, 90, 69, 0.28);
+  --accent: #8f5c3f;
+  --accent-soft: rgba(143, 92, 63, 0.12);
+  --shadow: 0 24px 60px rgba(75, 54, 40, 0.08);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-background-strong: var(--background-strong);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
   --font-sans: var(--font-nunito);
   --font-serif: var(--font-eb-garamond);
   --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-nunito), 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  line-height: 1.6;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at top left, rgba(231, 197, 162, 0.34), transparent 32%),
+    radial-gradient(circle at top right, rgba(205, 175, 145, 0.22), transparent 28%),
+    linear-gradient(180deg, rgba(255, 251, 245, 0.92), rgba(246, 239, 228, 0.96));
+}
+
+body::after {
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(92, 68, 52, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 68, 52, 0.03) 1px, transparent 1px);
+  background-size: 22px 22px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-eb-garamond), serif;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+a {
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
 }
 
 .text-content {
-  color: #414146;
+  color: var(--muted);
 }
 
 .border-content {
-  border-color: #d1d0d5;
-}
-
-html {
-  scroll-behavior: smooth;
+  border-color: var(--border);
 }
